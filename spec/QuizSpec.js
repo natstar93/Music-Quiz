@@ -10,13 +10,38 @@ describe('Game', function(){
     expect(game.score).toEqual(0);
   });
 
-  it('can check if an answer is correct', function(){
-    expect(game.checkAnswer('a','a')).toEqual(true);
+  describe("correct answer", function() {
+    it('can check if an answer is correct', function(){
+      expect(game.checkAnswer('a')).toEqual(true);
+    });
+
+    it('increments score count', function(){
+      game.checkAnswer('a');
+      expect(game.score).toEqual(1);
+    });
   });
 
-  it('increments score count', function(){
-    game.checkAnswer('a','a');
-    expect(game.score).toEqual(1);
+  describe("incorrect answer", function() {
+    it('can check if an answer is correct', function(){
+      expect(game.checkAnswer('b')).toEqual(false);
+    });
+
+    it('increments score count', function(){
+      game.checkAnswer('b');
+      expect(game.score).toEqual(0);
+    });
   });
 
+  it('increments turn count', function(){
+      game.checkAnswer('b');
+      expect(game.turn).toEqual(1);
+  });
+
+  it('exits when 3 games have been played', function() {
+    game.checkAnswer('a');
+    game.checkAnswer('a');
+    game.checkAnswer('a');
+    game.checkPlaying();
+    expect(game.playing).toBe(false);
+  })
 });
