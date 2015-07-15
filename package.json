@@ -1,0 +1,20 @@
+{
+  "name": "music-quiz",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natstar93/Music-Quiz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/natstar93/Music-Quiz/issues"
+  },
+  "homepage": "https://github.com/natstar93/Music-Quiz#readme",
+  "description": ""
+}
