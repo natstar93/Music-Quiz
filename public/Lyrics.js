@@ -2,15 +2,15 @@ var Game = function() {
   this.score = 0;
   this.turn = 0;
   this.playing = true;
-  this.noQuestions = 5;
+  this.noQuestions = 3;
   this.answers = [];
   this.questions = [];
   this.answerAs = [];
   this.answerBs = [];
   this.answerCs = [];
-  this.songs = [];
-  this.trivia = '{"name":"Guess that song!","questions":[{"id":"1", "answer":"a", "question":"What is the name of this song?", "a":"Stay With Me", "b":"Lay Me Down", "c":"I\'m Not The Only One", "song":"78282086"}, {"id":"2", "answer":"a", "question":"What is the name of this song?", "a":"Just Give Me A Reason", "b":"Try", "c":"Beam Me Up", "song":"60200391"}, {"id":"3", "answer":"c", "question":"What is the name of this song?", "a":"Darlington County", "b":"Dancing In The Dark", "c":"I\'m On Fire", "song":"15586369"}, {"id":"4", "answer":"b", "question":"What is the name of this song?", "a":"Goodbye Yellow Brick Road", "b":"Are You Ready For Love", "c":"Bennie and the Jets", "song":"1160181"},{"id":"5", "answer":"c", "question":"What is the name of this song?", "a":"Shine", "b":"Eyes Shut", "c":"King", "song":"93183390"}]}';
+  this.lyrics = '{"name":"Lyric Quiz","questions":[{"id":"1", "answer":"a", "question":"You\'re on the phone with your girlfriend<br />She\'s upset, she\'s going off about something that you said", "a":"You belong With Me", "b":"Love Story", "c":"Fifteen"}, {"id":"2", "answer":"b", "question":"Aren\'t you somethin\' to admire?<br />\'Cause your shine is somethin\' like a mirror", "a":"Suit & Tie", "b":"Mirrors", "c":"Not A Bad Thing"}, {"id":"3", "answer":"c", "question":"Left a good job in the city<br />Workin\' for the Man every night and day", "a":"River Deep Mountain High", "b":"We Don\'t Need Another Hero", "c":"Proud Mary"}]}';
 }
+
 
 Game.prototype.checkAnswer = function(guess) {
   var result = (guess === this.answers[this.turn])
@@ -29,7 +29,7 @@ Game.prototype.checkPlaying = function() {
 
 Game.prototype.setGame = function() {
 
- var obj = JSON.parse(this.trivia);
+ var obj = JSON.parse(this.lyrics);
 
   for(var i = 0; i < this.noQuestions; i++) {
     this.answers.push(obj.questions[i].answer);
@@ -49,9 +49,5 @@ Game.prototype.setGame = function() {
 
   for(var i = 0; i < this.noQuestions; i++) {
     this.answerCs.push(obj.questions[i].c);
-  }
-
-  for(var i = 0; i < this.noQuestions; i++) {
-    this.songs.push(obj.questions[i].song);
   }
 };
