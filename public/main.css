@@ -24,38 +24,43 @@ header {
 .container > section {
   min-height: 100%;
   margin: 0 auto;
-  padding: 20px 3px;
+  /*padding: 20px 3px;*/
 }
 
-.main, .main-quiz, .main-audio, .main-lyrics {
+.main, .main-quiz, .main-audio, .main-lyrics, .score-quiz, .score-audio, .score-lyrics {
   height: 100%;
   font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
 }
 
 .main {
   padding: 150px 0;
-  background-color:#CFF4EC;
+  background-color: #CFF4EC;
 }
 
-.main-quiz {
+.main-quiz, .score-quiz {
   background-color: #D4E7F0;
 }
 
-.main-audio {
-  background-color:#F8E2C7;
+.main-audio, .score-audio {
+  background-color: #F8E2C7;
 }
 
-.main-lyrics {
+.main-lyrics, .score-lyrics {
   background-color: #F4DCDC;
+}
+
+.score-quiz, .score-audio, .score-lyrics {
+  padding-top: 50px;
 }
 
 a {
   text-decoration: none;
   color: #212121;
 }
- p {
-   margin: 0;
- }
+
+p {
+ margin: 0;
+}
 
 
 /* BUTTONS */
@@ -72,8 +77,9 @@ a {
   padding: 10px;
   border-radius: 50%;
   transition: background-color 0.5s ease;
-  border: 2px solid #212121;
+  border: 3px solid #212121;
   background-color:#CFF4EC;
+  cursor: pointer;
 }
 
 .start-btns a:hover {
@@ -81,32 +87,46 @@ a {
   background-color: #c0e3db;
 }
 
-span.quiz-btn {
+span.quiz-btn, span.lyric-btn, span.audio-btn {
   display: inline-block;
   border: 2px solid #212121;
   font-size: 12px;
-  width: 120px;
-  /*height: 25px;*/
-  padding: 10px 12px;
-  margin: 0 10px 30px;
+  width: 135px;
+  padding: 15px 10px;
+  margin: 0 10px 40px;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  letter-spacing: 1px;
 }
+
+span.quiz-btn {
+  width: 135px;
+}
+
+span.lyric-btn {
+  width: 235px;
+}
+
+span.audio-btn {
+  width: 120px;
+}
+
 /*
 button {
   border: none;
   outline: none;
 }*/
 
-.play-btn, .quiz-btn {
+.play-btn, .quiz-btn, .audio-btn, .lyric-btn  {
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .play-btn {
   border: 2px solid #212121;
   font-size: 12px;
-  width: 100px;
+  width: 150px;
   padding: 10px 12px;
-  /*margin: 0 10px;*/
+  margin: 0 auto;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
@@ -117,22 +137,20 @@ button {
 
 .score {
   font-size: 50px;
+  padding: 100px 0 40px;
 }
 
 .questions {
   padding: 120px 0 40px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
 }
 
 /* LYRICS */
-
-.lyric-qu {
-
-}
+.lyric-qu {}
 
 .quotes {
-  font-size: 75px;
+  font-size: 80px;
 }
 
 .lyrics {
@@ -140,4 +158,18 @@ button {
   padding: 0;
   font-style: italic;
   /*font-size: 20px;*/
+}
+
+#turn, #noQuestions, #score {
+  color: #545454;
+  font-size: 14px;
+}
+
+#final, #outof {
+  color: #545454;
+}
+
+.audio-thumb {
+  /*background-color: #F8E2C7;*/
+  padding: 100px 0 40px;
 }

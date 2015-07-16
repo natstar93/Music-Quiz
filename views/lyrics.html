@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Testing stuff</title>
+	<title>Lyric Quiz</title>
 	<!--<script src="../public/jquery-2.1.4.min.js"></script>
 	<script src="../public/Quiz.js"></script>
 	<script src="../public/app.js"></script>-->
@@ -15,31 +15,31 @@
 		<header>
 			Music Quiz of the Year
 		</header>
-		<section class="main-audio" id="quiz-main">
+		<section class="main-lyrics" id="quiz-main">
 			<div class="questions">
 		    <span class="quotes">&ldquo;</span>
 				<p id="question" class="lyrics"></p>
 				<span class="quotes">&rdquo;</span>
 			</div>
 			<div class="buttons">
-		    <span id="a"></span>
-		    <button id="b"></button>
-		    <button id="c"></button>
+		    <span id="a" class="lyric-btn"></span>
+		    <span id="b" class="lyric-btn"></span>
+		    <span id="c" class="lyric-btn"></span>
 			</div>
-			<div class="info">
-		    <p>Question no: <span id="turn"></span></p>
-		    <p>Score: <span id="score"></span></p>
-		    <p>Total questions: <span id="noQuestions"></span></p>
-			</div>
-    <!-- <p>Playing: <span id="playing"></span></p> -->
+			<div>
+        <p><b>Question&nbsp;&nbsp;</b><span id="turn"></span> <b>/</b> <span id="noQuestions"></span></p>
+        <p><b>Score&nbsp;&nbsp;&nbsp;</b><span id="score"></span></p>
+      </div>
   	</section>
-  	<div id="score-main" class="results" style="display:none;">
-	    <p class="score">
-	      Score: <span id="final"></span> out of <span id="outof"></span>
-	    </p>
-			<div class="play-btn">
-				<a href='/'>Play</a>
-			</div>
+		<section class="score-lyrics">
+	  	<div id="score-main" class="results" style="display:none;">
+		    <p class="score">
+		      <b>Score&nbsp;&nbsp;&nbsp;</b> <span id="final"></span> / <span id="outof"></span>
+		    </p>
+				<div class="play-btn">
+					<a href='/'>Play another quiz</a>
+				</div>
+			</section>
   	</div>
 </body>
 </html>

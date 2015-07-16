@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Testing stuff</title>
+	<title>Trivia Music Quiz</title>
 	<!--<script src="../public/jquery-2.1.4.min.js"></script>
 	<script src="../public/Quiz.js"></script>
 	<script src="../public/app.js"></script>-->
@@ -24,19 +24,21 @@
         <span id="b" class="quiz-btn"></span>
         <span id="c" class="quiz-btn"></span>
       </div>
-      <div class="info">
-        <p>Question no: <span id="turn"></span></p>
-        <p>Score: <span id="score"></span></p>
-        <p>Total questions: <span id="noQuestions"></span></p>
+      <div>
+        <p><b>Question&nbsp;&nbsp;</b><span id="turn"></span> <b>/</b> <span id="noQuestions"></span></p>
+        <p><b>Score&nbsp;&nbsp;&nbsp;</b><span id="score"></span></p>
       </div>
-  </section>
-  <div id="score-main" class="results" style="display:none;">
-    <p class="score">
-      Score: <span id="final"></span> out of <span id="outof"></span>
-    </p>
-    <div class="play-btn">
-      <a href='/'>Play</a>
-    </div>
+    </section>
+    <section class="score-quiz">
+      <div id="score-main" class="results" style="display:none;">
+        <p class="score">
+          <b>Score&nbsp;&nbsp;&nbsp;</b> <span id="final"></span> / <span id="outof"></span>
+        </p>
+        <div class="play-btn">
+          <a href='/'>Play another quiz</a>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 </html>

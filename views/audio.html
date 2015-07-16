@@ -11,45 +11,47 @@
   <script src="/appAudio.js"></script>
 </head>
   <body>
-    <h1>Guess that Song!</h1>
-    <div id="Stay-with-me">
-      <script>
-        (function(d, s, id) {
-        var js, djs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "http://cdn-files.deezer.com/js/widget/loader.js";
-         djs.parentNode.insertBefore(js, djs);
-        }(document, "script", "deezer-widget-loader"));
-      </script>
-
-      <div class="deezer-widget-player" id="clip" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="70" data-height="70"></div>
-    </div>
 
     <div class="wrapper">
       <header>
         Music Quiz of the Year
       </header>
       <section class="main-audio" id="quiz-main">
-        <div class="buttons">
-          <span id="a" class="quiz-btn"></span>
-          <span id="b" class="quiz-btn"></span>
-          <span id="c" class="quiz-btn"></span>
+        <!-- <h1>Guess that Song!</h1> -->
+        <div id="Stay-with-me" class="audio-thumb">
+          <div class="deezer-widget-player" id="clip" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="70" data-height="70"></div>
         </div>
-        <div class="info">
-          <p>Question no: <span id="turn"></span></p>
-          <p>Score: <span id="score"></span></p>
-          <p>Total questions: <span id="noQuestions"></span></p>
+
+        <div class="buttons">
+          <span id="a" class="audio-btn"></span>
+          <span id="b" class="audio-btn"></span>
+          <span id="c" class="audio-btn"></span>
+        </div>
+        <div>
+          <p><b>Question&nbsp;&nbsp;</b><span id="turn"></span> <b>/</b> <span id="noQuestions"></span></p>
+          <p><b>Score&nbsp;&nbsp;&nbsp;</b><span id="score"></span></p>
         </div>
       </section>
-      <div id="score-main" class="results" style="display:none;">
-        <p class="score">
-        Score: <span id="final"></span> out of <span id="outof"></span>
-        </p>
-        <div class="play-btn">
-          <a href='/'>Play</a>
+      <section class="score-audio">
+        <div id="score-main" class="results" style="display:none;">
+          <p class="score">
+            <b>Score&nbsp;&nbsp;&nbsp;</b> <span id="final"></span> / <span id="outof"></span>
+          </p>
+          <div class="play-btn">
+            <a href='/'>Play another quiz</a>
+          </div>
         </div>
       </div>
-
+    </div>
   </body>
+
+  <script>
+    (function(d, s, id) {
+    var js, djs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "http://cdn-files.deezer.com/js/widget/loader.js";
+     djs.parentNode.insertBefore(js, djs);
+    }(document, "script", "deezer-widget-loader"));
+  </script>
 </html>

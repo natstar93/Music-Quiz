@@ -8,7 +8,7 @@ var Game = function() {
   this.answerAs = [];
   this.answerBs = [];
   this.answerCs = [];
-  this.lyrics = '{"name":"Lyric Quiz","questions":[{"id":"1", "answer":"a", "question":"You\'re on the phone with your girlfriend<br />She\'s upset, she\'s going off about something that you said", "a":"You belong With Me", "b":"Love Story", "c":"Fifteen"}, {"id":"2", "answer":"b", "question":"Aren\'t you somethin\' to admire?<br />\'Cause your shine is somethin\' like a mirror", "a":"Suit & Tie", "b":"Mirrors", "c":"Not A Bad Thing"}, {"id":"3", "answer":"c", "question":"Left a good job in the city<br />Workin\' for the Man every night and day", "a":"River Deep Mountain High", "b":"We Don\'t Need Another Hero", "c":"Proud Mary"}]}';
+  this.lyrics = '{"name":"Lyric Quiz","questions":[{"id":"1", "answer":"a", "question":"Well, my friends, the time has come<br />To raise the roof and have some fun", "a":"All Night Long", "b":"Hello", "c":"Dancing on the Ceiling"}, {"id":"2", "answer":"b", "question":"Load Up on guns, bring your friends<br />It\’s fun to lose and to pretend", "a":"Come As You Are", "b":"Smells Like Teen Spirit", "c":"Stay Away"}, {"id":"3", "answer":"c", "question":"Left a good job in the city<br />Workin\' for the Man every night and day", "a":"River Deep Mountain High", "b":"We Don\'t Need Another Hero", "c":"Proud Mary"}]}';
 }
 
 
