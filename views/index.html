@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Quiz</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="wrapper" >
-      <div class="content">
-        <div class="header">LYRIC QUIZ</div>
-        <div class="question1">
-          <p>Left a good job in the city<br />Workin' for the Man every night and day</p>
-          <a href="#" id="answer1a" class="buttons">Proud Mary</a><br />
-          <a href="#" id="answer1b" class="buttons">River Deep Mountain High</a><br />
-          <a href="#" id="answer1c" class="buttons">We Don't Need Another Hero</a>
-        </div>
-        <div class="question2">
-          <p>You're on the phone with your girlfriend<br />She's upset, she's going off about something that you said</p>
-          <a href="#" id="answer2a" class="buttons">Love Story</a><br />
-          <a href="#" id="answer2b" class="buttons">You Belong With Me</a><br />
-          <a href="#" id="answer2c" class="buttons">Fifteen</a>
-        </div>
-        <div class="question3">
-          <p>Aren't you somethin' to admire?<br />'Cause your shine is somethin' like a mirror</p>
-          <a href="#" id="answer3a" class="buttons">Not A Bad Thing</a><br />
-          <a href="#" id="answer3b" class="buttons">Suit &amp; Tie</a><br />
-          <a href="#" id="answer3c" class="buttons">Mirrors</a>
-        </div>
-        <div id="result" class="results">
-          &nbsp;
-          <!-- <span style="display:block" id="playerCount">Your result</span> -->
-        </div>
-        <div class="counters">
-          <!-- <span>Player: </span>
-          <span id="playerCount"></span><br />
-          <span>Computer: </span>
-          <span id="compCount"></span> -->
-        </div>
-      </div>
-    </div>
-  </body>
-  <script type="text/javascript" src="Quiz.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+<head>
+	<title>Testing stuff</title>
+	<script src="../public/jquery-2.1.4.min.js"></script>
+	<script src="../public/Quiz.js"></script>
+	<script src="../public/app.js"></script>
+	<!--<script src="/jquery-2.1.4.min.js"></script>
+	<script src="/Quiz.js"></script>
+	<script src="/app.js"></script>-->
+</head>
+<body>
+<h1>Music Quiz</h1>
+<div id="quiz-main">
+<p id="question"></p>
+<button id="a"></button>
+<button id="b"></button>
+<button id="c"></button>
+<p>Question no: <span id="turn"></span></p>
+<p>Score: <span id="score"></span></p>
+<p>Total questions: <span id="noQuestions"></span></p>
+<p>Playing: <span id="playing"></span></p>
+</div>
+<div id="score-main" style="display:none;">
+<p style="font-size: 50px;">
+  Score: <span id="final"></span> out of <span id="outof"></span>
+</p>
+<button id="replay">Play again</button>
+</div>
+</body>
 </html>

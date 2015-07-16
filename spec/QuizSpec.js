@@ -4,6 +4,7 @@ describe('Game', function(){
 
   beforeEach(function(){
     game = new Game();
+    game.setGame();
   });
 
   it('starts with a score of 0', function(){
@@ -26,7 +27,7 @@ describe('Game', function(){
       expect(game.checkAnswer('b')).toEqual(false);
     });
 
-    it('increments score count', function(){
+    it('does not increment score count', function(){
       game.checkAnswer('b');
       expect(game.score).toEqual(0);
     });
@@ -41,7 +42,6 @@ describe('Game', function(){
     game.checkAnswer('a');
     game.checkAnswer('a');
     game.checkAnswer('a');
-    game.checkPlaying();
     expect(game.playing).toBe(false);
   })
 });

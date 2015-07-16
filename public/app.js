@@ -1,43 +1,42 @@
-var game = new Game();
+$(document).ready(function() {
 
-$("#answer1a").on('click', function() {
-  event.preventDefault();
-  game.checkAnswer('a');
-  $('#result').html(game.score);
-});
+  var game = new Game;
+  game.setGame();
+  showEverything();
 
-$("#answer1b").on('click', function() {
-  event.preventDefault();
-});
+  function showEverything() {
+  	if (game.playing === false) {
+      $('#quiz-main').hide();
+      $('#score-main').show();
+      $('#final').html(game.score);
+      $('#outof').html(game.noQuestions);
+    }
+    $("#turn").html(game.turn + 1);
+    $("#score").html(game.score);
+    $("#noQuestions").html(game.noQuestions);
+    $('#question').html(game.questions[game.turn]);
+    $('#a').html(game.answerAs[game.turn]);
+    $('#b').html(game.answerBs[game.turn]);
+    $('#c').html(game.answerCs[game.turn]);
+    $("#playing").html(game.playing);
+  }
 
-$("#answer1c").on('click', function() {
-  event.preventDefault();
-});
+  $("#a").click(function() {
+    game.checkAnswer('a');
+    showEverything();
+  });
 
-$("#answer2b").on('click', function() {
-  event.preventDefault();
-  game.checkAnswer('b');
-  $('#result').html(game.score);
-});
+  $("#b").click(function() {
+    game.checkAnswer('b');
+    showEverything();
+  });
 
-$("#answer1a").on('click', function() {
-  event.preventDefault();
-});
+  $("#c").click(function() {
+    game.checkAnswer('c');
+    showEverything();
+  }); 
 
-$("#answer1c").on('click', function() {
-  event.preventDefault();
-});
-
-$("#answer3c").on('click', function() {
-  event.preventDefault();
-  game.checkAnswer('c');
-  $('#result').html(game.score);
-});
-
-$("#answer3a").on('click', function() {
-  event.preventDefault();
-});
-
-$("#answer1b").on('click', function() {
-  event.preventDefault();
+  $("#replay").click(function() {
+    location.reload();
+  }); 
 });
