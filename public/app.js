@@ -19,6 +19,8 @@ $(document).ready(function() {
     $('#b').html(game.answerBs[game.turn]);
     $('#c').html(game.answerCs[game.turn]);
     $("#playing").html(game.playing);
+    $("#clip").attr("data-src", "http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=7&height=70&color=1990DB&layout=dark&size=medium&type=tracks&id=" + game.songs[game.turn] + "&title=&app_id=1");
+    
   }
 
   $("#a").click(function() {
@@ -38,5 +40,6 @@ $(document).ready(function() {
 
   $("#replay").click(function() {
     location.reload();
+
   }); 
 });
