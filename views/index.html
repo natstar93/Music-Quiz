@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Testing stuff</title>
+	<title>Music Quiz</title>
 	<!--<script src="../public/jquery-2.1.4.min.js"></script>
 	<script src="../public/Quiz.js"></script>
 	<script src="../public/app.js"></script>-->
@@ -10,23 +10,15 @@
 	<script src="/app.js"></script>
 </head>
 <body>
-<h1>Music Quiz</h1>
-<div id="quiz-main">
-<p id="question"></p>
-<button id="a"></button>
-<button id="b"></button>
-<button id="c"></button>
-<a href='/quiz'>START</a>
-<p>Question no: <span id="turn"></span></p>
-<p>Score: <span id="score"></span></p>
-<p>Total questions: <span id="noQuestions"></span></p>
-<p>Playing: <span id="playing"></span></p>
-</div>
-<div id="score-main" style="display:none;">
-<p style="font-size: 50px;">
-  Score: <span id="final"></span> out of <span id="outof"></span>
-</p>
-<button id="replay">Play again</button>
-</div>
+	<h1>Please select a quiz to play</h1>
+		<div class="button">
+			<a href='/quiz'>Trivia quiz</a>
+		</div>
+		<div class="button">
+			<a href='/lyrics'>Lyrics quiz</a>
+		</div>
+		<div class="button">
+			<a href='/audio'>Audio quiz</a>
+		</div>
 </body>
 </html>

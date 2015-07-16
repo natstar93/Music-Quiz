@@ -13,6 +13,14 @@ app.get('/quiz', function(req, res){
   res.sendFile(__dirname + '/views/quiz.html');
 });
 
+app.get('/audio', function(req, res){
+  res.sendFile(__dirname + '/views/audio.html');
+});
+
+app.get('/lyrics', function(req, res){
+  res.sendFile(__dirname + '/views/lyrics.html');
+});
+
 server.listen(3000, function(){
   console.log("Server listening on port 3000");
 });
