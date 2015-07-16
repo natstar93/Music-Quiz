@@ -1,19 +1,15 @@
-button {
-  border: none;
-  outline: none;
-}
-
-
-/*.wrapper {
-  height: 300px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-}*/
-
 body {
 	overflow: auto;
+}
+
+header {
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+  font-weight: 300;
+  background-color: #f0f0f0;
+  padding: 30px 0;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
 .wrapper {
@@ -22,16 +18,126 @@ body {
 	height: 100%;
 	top: 0;
 	left: 0;
-	font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
+  text-align: center;
 }
 
-/*.content {
-  height: 1000px;
-  width: 2000px;
-  position: absolute;
+.container > section {
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 20px 3px;
+}
+
+.main, .main-quiz, .main-audio, .main-lyrics {
+  height: 100%;
+  font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+}
+
+.main {
+  padding: 150px 0;
+  background-color:#CFF4EC;
+}
+
+.main-quiz {
+  background-color: #D4E7F0;
+}
+
+.main-audio {
+  background-color:#F8E2C7;
+}
+
+.main-lyrics {
+  background-color: #F4DCDC;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+ p {
+   margin: 0;
+ }
+
+
+/* BUTTONS */
+
+.start-btns img {
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+}
+
+.start-btns a {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+  border: 2px solid #212121;
+  background-color:#CFF4EC;
+}
+
+.start-btns a:hover {
+  transform: scale(1.1);
+  background-color: #c0e3db;
+}
+
+span.quiz-btn {
+  display: inline-block;
+  border: 2px solid #212121;
+  font-size: 12px;
+  width: 120px;
+  /*height: 25px;*/
+  padding: 10px 12px;
+  margin: 0 10px 30px;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-  font-size: 15px;
-  color: #ffffff;
-  margin: 0px 0 0 -1000px;
-  left: 50%;
+}
+/*
+button {
+  border: none;
+  outline: none;
 }*/
+
+.play-btn, .quiz-btn {
+  text-transform: uppercase;
+}
+
+.play-btn {
+  border: 2px solid #212121;
+  font-size: 12px;
+  width: 100px;
+  padding: 10px 12px;
+  /*margin: 0 10px;*/
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* SCORE */
+#score-main {
+  display:none;
+}
+
+.score {
+  font-size: 50px;
+}
+
+.questions {
+  padding: 120px 0 40px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* LYRICS */
+
+.lyric-qu {
+
+}
+
+.quotes {
+  font-size: 75px;
+}
+
+.lyrics {
+  display: inline-block;
+  padding: 0;
+  font-style: italic;
+  /*font-size: 20px;*/
+}
