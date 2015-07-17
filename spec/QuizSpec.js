@@ -12,7 +12,7 @@ describe('Game', function(){
   });
 
   describe("correct answer", function() {
-    it('can check if an answer is correct', function(){
+    it('will compare users input with answer', function(){
       expect(game.checkAnswer('a')).toEqual(true);
     });
 
