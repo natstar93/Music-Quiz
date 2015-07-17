@@ -1,4 +1,4 @@
-var Game = function() {
+function Game(data) {
   this.score = 0;
   this.turn = 0;
   this.playing = true;
@@ -8,7 +8,7 @@ var Game = function() {
   this.answerAs = [];
   this.answerBs = [];
   this.answerCs = [];
-  this.trivia = '{"name":"Music Quiz","questions":[{"id":"1", "answer":"a", "question":"Who is known as the fifth Beatle?", "a":"Stuart Sutcliffe", "b":"Peter Heathcliff", "c":"Brian Epstein"}, {"id":"2", "answer":"b", "question":"Who\'s still alive?", "a":"Ben E. King", "b":"Bieber", "c":"B.B. King"}, {"id":"3", "answer":"c", "question":"Which band has Damon Albarn not been in?", "a":"Blur", "b":"Gorrilaz", "c":"The Strokes"}]}';
+  this.trivia    = data;
 };
 
 Game.prototype.checkAnswer = function(guess) {

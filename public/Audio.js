@@ -28,8 +28,7 @@ Game.prototype.checkPlaying = function() {
 };
 
 Game.prototype.setGame = function() {
-
- var obj = JSON.parse(this.trivia);
+  var obj = JSON.parse(this.trivia);
 
   for(var i = 0; i < this.noQuestions; i++) {
     this.answers.push(obj.questions[i].answer);
@@ -43,9 +42,9 @@ Game.prototype.setGame = function() {
     this.answerAs.push(obj.questions[i].a);
   }
 
-  for(var i = 0; i < this.noQuestions; i++) {
-    this.answerBs.push(obj.questions[i].b);
-  }
+  this.addToArray(function(idx) {
+    this.answerBs.push(obj.questions[idx].b);
+  });
 
   for(var i = 0; i < this.noQuestions; i++) {
     this.answerCs.push(obj.questions[i].c);
@@ -55,3 +54,9 @@ Game.prototype.setGame = function() {
     this.songs.push(obj.questions[i].song);
   }
 };
+
+Game.prototype.addToArray = function(callback) {
+  for(var i = 0; i < this.noQuestions; i++) {
+    callback(i);
+  }
+}

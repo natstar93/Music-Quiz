@@ -1,15 +1,21 @@
 $(document).ready(function() {
+  
+  $.getJSON('/mock_data.json', function(mock_data) {
+    var game = new Game(mock_data.responseText);
+    game.setGame();
+    showEverything();
+  });
 
-  var game = new Game;
-  game.setGame();
-  showEverything();
+  function displayGameResult() {
+    $('#quiz-main').hide();
+    $('#score-main').show();
+    $('#final').html(game.score);
+    $('#outof').html(game.noQuestions);
+  }
 
   function showEverything() {
   	if (game.playing === false) {
-      $('#quiz-main').hide();
-      $('#score-main').show();
-      $('#final').html(game.score);
-      $('#outof').html(game.noQuestions);
+      displayGameResult();
     }
     $("#turn").html(game.turn + 1);
     $("#score").html(game.score);
@@ -18,7 +24,7 @@ $(document).ready(function() {
     $('#a').html(game.answerAs[game.turn]);
     $('#b').html(game.answerBs[game.turn]);
     $('#c').html(game.answerCs[game.turn]);
-    $("#playing").html(game.playing);
+    $("#playing").html(game.playing); // put all above in a function telling me what it's doing
   }
 
   $("#a").click(function() {
